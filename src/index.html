@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="app">
   <head>
     <base href="/">
     <meta charset="utf-8">
@@ -9,7 +9,28 @@
     <link rel="icon" type="image/png" href="http://fountainjs.io/assets/imgs/fountain.png" />
   </head>
 
-  <body ng-app="app">
-    <ui-view></ui-view>
+  <body ng-controller="HomeController as home">
+      <h1>Hi my name is:  {{ home.name }}</h1>
+      
+      <ul>
+        <li ng-repeat="student in home.students">Student name: {{ student }}</li>
+      </ul>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Profession</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Diego</td>
+            <td>26</td>
+            <td>Developer</td>
+          </tr>
+        </tbody>
+      </table>
   </body>
 </html>

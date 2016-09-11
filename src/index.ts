@@ -1,16 +1,11 @@
 /// <reference path="../typings/index.d.ts" />
 
-import * as angular from 'angular';
-
-import {hello} from './app/hello';
+import 'angular';
 import 'angular-ui-router';
-import routesConfig from './routes';
 
 import './index.scss';
 
-export const app: string = 'app';
+import './app/app';
 
-angular
-  .module(app, ['ui.router'])
-  .config(routesConfig)
-  .component('app', hello);
+import './app/home/home.app';
+import './app/home/controllers/home.controller';
